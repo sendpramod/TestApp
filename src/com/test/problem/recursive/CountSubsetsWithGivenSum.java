@@ -4,7 +4,6 @@ public class CountSubsetsWithGivenSum {
 
     public static void main(String[] args) {
         // how many subsets exists with a given sum
-
         System.out.println("Expected 3 -> found: " + findCountSubsetsWithSum(new int[]{1, 2, 3, 3}, 6, 4));
         System.out.println("Expected 2 -> found: " + findCountSubsetsWithSum(new int[]{1, 2, 3, 4}, 6, 4));
         System.out.println("Expected 3 -> found: " + findCountSubsetsWithSum(new int[]{1, 2, 3, 4, 5}, 7, 5));
@@ -18,7 +17,6 @@ public class CountSubsetsWithGivenSum {
         if (val[n - 1] <= sum) {
             res = findCountSubsetsWithSum(val, sum - val[n - 1], n - 1);
         }
-        res += findCountSubsetsWithSum(val, sum, n - 1);
-        return res;
+       return res += findCountSubsetsWithSum(val, sum, n - 1);
     }
 }

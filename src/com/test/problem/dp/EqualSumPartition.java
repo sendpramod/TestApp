@@ -27,7 +27,7 @@ public class EqualSumPartition {
         }
 
         for (int n = 1; n <= val.length; n++) {
-            for (int sIndex = 0; sIndex <= sum; sIndex++) {
+            for (int sIndex = 1; sIndex <= sum; sIndex++) {
                 cache[n][sIndex] = cache[n - 1][sIndex];
                 if (val[n - 1] <= sIndex) {
                     cache[n][sIndex] = cache[n - 1][sIndex - val[n - 1]] || cache[n - 1][sIndex];

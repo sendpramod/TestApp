@@ -7,7 +7,7 @@ public class Knapsack {
     }
 
     public static int findTheMaxVal(int[] val, int weight[], int capacity) {
-        //1: in dp use the base case of recursive and fill the table
+        //1: in dp soln, use the base case of recursive and fill the table
         int cache[][] = new int[weight.length + 1][capacity + 1];
         for (int n = 0; n < cache.length; n++) {
             for (int wt = 0; wt < cache[n].length; wt++) {
