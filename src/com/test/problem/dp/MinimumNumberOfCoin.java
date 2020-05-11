@@ -2,6 +2,7 @@ package com.test.problem.dp;
 
 public class MinimumNumberOfCoin {
     public static void main(String[] args) {
+        // minimum number of coins required to achive a sum
         System.out.println("Expected 2 -> Found: " + findMinimumNumberOfCoin(new int[]{25, 10, 5}, 30));
         System.out.println("Expected 4 -> Found: " + findMinimumNumberOfCoin(new int[]{2, 3, 8}, 15));
 

@@ -2,10 +2,10 @@ package com.test.problem.dp;
 
 public class PrintLongestCommonSubString {
     public static void main(String[] args) {
-        System.out.println("Expected 4 -> " + findLongestCommonSubstring("abcdxyzq", "efgxyzq"));
-        System.out.println("Expected 6 -> " + findLongestCommonSubstring("abcdef", "abcdef"));
-        System.out.println("Expected 1 -> " + findLongestCommonSubstring("ABCDGH", "AEDFHR"));
-        System.out.println("Expected 2 -> " + findLongestCommonSubstring("AGGTABC", "GXTXAYBC"));
+        System.out.println("1: Expected 4 -> " + findLongestCommonSubstring("abcdxyzq", "efgxyzq") + "\n");
+        System.out.println("2: Expected 6 -> " + findLongestCommonSubstring("abcdef", "abcdef") + "\n");
+        System.out.println("3: Expected 1 -> " + findLongestCommonSubstring("ABCDGH", "AEDFHR") + "\n");
+        System.out.println("4: Expected 2 -> " + findLongestCommonSubstring("AGGTABC", "GXTXAYBC") + "\n");
     }
 
     private static int findLongestCommonSubstring(String str1, String str2) {
@@ -30,7 +30,7 @@ public class PrintLongestCommonSubString {
                 }
             }
         }
-
+        int length = cache[str1.length()][str2.length()];
         //print
         //int len = maxSubstring;
         String resultStr = "";
@@ -39,7 +39,8 @@ public class PrintLongestCommonSubString {
             x--;
             y--;
         }
-        System.out.println(resultStr);
+        System.out.println("LCS: " + resultStr);
+
         return maxSubstring;
     }
 }

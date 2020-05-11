@@ -1,7 +1,8 @@
 package com.test.problem.dp;
 
-public class MinimumSubsetDifference {
+public class MinimumSubsetSumDifference {
     public static void main(String[] args) {
+        //find 2 subsets with minimum difference
         System.out.println("Expected: 2 -> Found:   " + minimumSubsetDifference(new int[]{1, 3, 5, 6, 11}));
     }
 
